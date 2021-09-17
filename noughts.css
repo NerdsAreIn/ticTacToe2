@@ -60,33 +60,36 @@ margin: 10px auto;
 padding: 5px;
 font-size: 20px;
 display: inline-block;
-z-index: -1;
 }
 #title-div {
-z-index: 1;
+z-index: 2;
 text-align: center;
-padding: 5px;
-margin: 10px;
 }
 h1 {
 font-family: "black-spray";
 font-size: 60px;
-margin: 5px;
 z-index: 2;
+line-height: 75px;
+text-indent: 38px;
+word-spacing: 10px;
+}
+#titleSpan2 {
+z-index: 3;
+background-color: white;
 }
 #title-span {
 font-family: "white-spray";
 z-index: 3;
 background-color: white;
-padding-left: 20px;
+padding-left: 15px;
 }
 body {
 position: relative;
 background: linear-gradient(to right, black 50%, white 50%);
-padding: 0;
-z-index: -1;
+z-index: 1;
 width: inherit;
 height: inherit;
+text-align: center;
 }
 #gameboard {
 box-sizing: border-box;
@@ -97,35 +100,31 @@ height: 320px;
 grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
 background-color: white;
 margin: 0 auto;
-z-index: 2;
+z-index: 3;
 }
 #gameboard-container {
-box-sizing: content-box;
-padding: 0;
 background-color: white;
 width: 320px;
 height: 320px;
 float: right;
 position: relative;
-z-index: 1;
+z-index: 2;
 margin: 20px 150px 5px 50px;
 }
 @media screen and (max-width: 1020px) {
     #gameboard-container { 
-  	margin: 50px auto;
+  	margin: 10px auto;
     float: none;
     z-index: 1;
-    bottom: -320px;
-	}
+    	}
 	#gameboard {
 	position: absolute;
 	top: 0; 
 	left: 0;
 	}
 	#playerControls {
-    float: none;
 	margin: 50px auto;
-	height: max-content;
+    height: max-content;
     width: max-content;
    }	
 }
@@ -139,8 +138,7 @@ font-size: 80px;
 text-align: center;
 }
 #playerControls {
-float: left;
-margin: 20px 30px 5px 100px;
+margin: 20px 30px 5px;
 font-weight: bold;
 line-height: 40px;
 background-color: white;
@@ -148,6 +146,9 @@ padding: 3px;
 border: 10px groove black;
 text-align: center;
 height: 320px;
+width: 370px;
+z-index: 2;
+display: inline-block;
 }
 .nought {
 color: rgb(240, 240, 240);
@@ -193,7 +194,7 @@ animation-timing-function: linear;
 #choice-screen {
 height: 900px;
 width: inherit;
-z-index: 3;
+z-index: 4;
 background-color: grey;
 opacity: 1;
 position: absolute;

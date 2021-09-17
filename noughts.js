@@ -205,14 +205,14 @@ startButton.addEventListener("click", function() {
 					}
 				}
 				const strategicMove = function() {
-					if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[5] == "O" && squares[8].hasChildNodes() == false) {
+					if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[5] == "X" && squares[8].hasChildNodes() == false) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());								        
 						setTimeout(() => {squares[8].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[5] == "X" && squares[8].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[5] == "O" && squares[8].hasChildNodes() == false) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());								        
