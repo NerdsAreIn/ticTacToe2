@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Noughts and Crosses</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="noughts.css" type="text/css">    
+</head>
+<body>
+    <div id="choice-screen">
+    <h2>CHOOSE MODE:</h2>
+    <button class="choice-button">AI: hard</button><button class="choice-button">AI: easy</button><button class="choice-button">2-Player</button>
+</div>
+    <div id="title-div">
+        <h1><span id="title-span">NOUGHTS &</span>CROSSES</h1>
+    </div>
+    <div id="playerControls">
+        <div id="player1" class="player-info">
+            <span>Player 1: </span><img src="images/nought.jpg"><br>
+        <label>Player 1's name:<br><input type="text" id="player1Name"></label> 
+        </div>
+        <div id="player2" class="player-info">
+            <span>Player 2: </span><img src="images/cross.jpg"><br>
+        <label>Player 2's name:<br><input type="text" id="player2Name"></label> 
+        </div>
+        <p id="displayText"></p>
+    </div>
+    <div id="gameboard-container">
+        <div id="gameboard" class="disabled">
+            <div id="1" class="squares"></div>
+            <div id="2" class="squares"></div>
+            <div id="3" class="squares"></div>
+            <div id="4" class="squares"></div>
+            <div id="5" class="squares"></div>
+            <div id="6" class="squares"></div>
+            <div id="7" class="squares"></div>
+            <div id="8" class="squares"></div>
+            <div id="9" class="squares"></div>
+        </div>
+    </div>  
+    </body>
+    <script src="noughts.js">    
+    </script>
+</body>
+</html>

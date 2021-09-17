@@ -1,0 +1,222 @@
+* {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+html {
+width: 100%;
+height: 100%;
+}
+@font-face {
+font-family: "white-spray";
+src: url("fonts/white\ spray.ttf");
+}
+@font-face {
+font-family: "black-spray";
+src: url("fonts/spray\ black.ttf");
+}
+@font-face {
+font-family: "fatChild";
+src: url("fonts/AFatChild.ttf");
+}
+@font-face {
+font-family: "gall";
+src: url("fonts/Gallagher.ttf");
+}
+@font-face {
+font-family: "mancunia";
+src: url("fonts/Mancunia.ttf");
+}
+@font-face {
+font-family: "learners1";
+src: url("fonts/LettersForLearners.ttf");
+}
+@keyframes pulse_animation {
+    0% { transform: scale(1); }
+    5% { transform: scale(1.01); }
+	10% { transform: scale(1.02); }
+	15% { transform: scale(1.03); }
+	20% { transform: scale(1.04); }
+	25% { transform: scale(1.05); }
+	30% { transform: scale(1.06); }
+	35% { transform: scale(1.07); }	
+	40% { transform: scale(1.08); }
+	45% { transform: scale(1.09); }
+	50% { transform: scale(1.1); background-color: white; box-shadow: 2px 2px 8px lightgrey;}
+	55% { transform: scale(1.09); }
+    60% {transform: scale(1.08);}
+    65% {transform: scale(1.07);}
+    70% { transform: scale(1.06); }
+    75% { transform: scale(1.05); }
+    80% { transform: scale(1.04); }
+    85% { transform: scale(1.03); }
+    90% { transform: scale(1.02); }
+    95% { transform: scale(1.01); }
+	100% { transform: scale(1); }
+}
+.player-info {
+font-family: "gall";
+margin: 10px auto;
+padding: 5px;
+font-size: 20px;
+display: inline-block;
+z-index: -1;
+}
+#title-div {
+z-index: 1;
+text-align: center;
+padding: 5px;
+margin: 10px;
+}
+h1 {
+font-family: "black-spray";
+font-size: 60px;
+margin: 5px;
+z-index: 2;
+}
+#title-span {
+font-family: "white-spray";
+z-index: 3;
+background-color: white;
+padding-left: 20px;
+}
+body {
+position: relative;
+background: linear-gradient(to right, black 50%, white 50%);
+padding: 0;
+z-index: -1;
+width: inherit;
+height: inherit;
+}
+#gameboard {
+box-sizing: border-box;
+display: grid;
+width: 320px;
+border: 4px solid black;
+height: 320px;
+grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+background-color: white;
+margin: 0 auto;
+z-index: 2;
+}
+#gameboard-container {
+box-sizing: content-box;
+padding: 0;
+background-color: white;
+width: 320px;
+height: 320px;
+float: right;
+position: relative;
+z-index: 1;
+margin: 20px 150px 5px 50px;
+}
+@media screen and (max-width: 1020px) {
+    #gameboard-container { 
+  	margin: 50px auto;
+    float: none;
+    z-index: 1;
+    bottom: -320px;
+	}
+	#gameboard {
+	position: absolute;
+	top: 0; 
+	left: 0;
+	}
+	#playerControls {
+    float: none;
+	margin: 50px auto;
+	height: max-content;
+    width: max-content;
+   }	
+}
+.disabled {
+border: 4px solid grey;
+opacity: 0.2;
+}
+.squares {
+border: 1px solid black;
+font-size: 80px;
+text-align: center;
+}
+#playerControls {
+float: left;
+margin: 20px 30px 5px 100px;
+font-weight: bold;
+line-height: 40px;
+background-color: white;
+padding: 3px;
+border: 10px groove black;
+text-align: center;
+height: 320px;
+}
+.nought {
+color: rgb(240, 240, 240);
+text-shadow: 7px 7px 2px black;
+}
+input {
+margin: 5px;
+padding: 1px;
+font-family: "fatChild";
+font-size: 18px;
+text-indent: 10px;
+width: 150px;
+height: 30px;
+border: 1px solid black;
+}
+input:active, input:focus, input:focus-visible {
+box-shadow: 2px 2px 6px grey;
+outline: 2px solid black;
+}
+img {
+width: 40px;
+height: auto;
+box-shadow: 2px 2px 2px black;
+vertical-align: middle;
+}
+p {
+font-family: "learners1";
+font-size: 20px;
+margin: -1px;
+}
+button {
+font-family: "mancunia";
+border-radius: 5px;
+font-size: 22px;
+padding: 3px;
+margin: 15px 0;
+animation-name: pulse_animation;
+animation-duration: 1300ms;
+transform-origin:70% 70%;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+#choice-screen {
+height: 900px;
+width: inherit;
+z-index: 3;
+background-color: grey;
+opacity: 1;
+position: absolute;
+text-align: center;
+border: 10px solid lightgrey;
+outline: 3px solid black;
+transition: opacity 1s;
+}
+#choice-screen.gone {
+opacity: 0;
+}
+.choice-button {
+width: 180px;
+margin: 50px;
+height: 80px;
+font-size: 50px;
+opacity: inherit;
+}
+h2 {
+margin: 50px 0 30px;
+font-family: "black-spray";
+font-size: 40px;
+}
+
+
+
