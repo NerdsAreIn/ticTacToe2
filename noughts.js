@@ -219,13 +219,6 @@ startButton.addEventListener("click", function() {
 						setTimeout(() => {squares[8].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[9] == "O" && squares[4].hasChildNodes() == false ) {
-						noughtsAndCrosses[5] = createCross().nodeValue;
-						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());								        
-						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
-						checkForWinner();
-					}
 					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[9] == "X" && squares[4].hasChildNodes() == false ) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
@@ -233,11 +226,11 @@ startButton.addEventListener("click", function() {
 						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[5] == "O" && noughtsAndCrosses[9] == "O" && squares[0].hasChildNodes() == false ) {
-						noughtsAndCrosses[1] = createCross().nodeValue;
+					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[9] == "O" && squares[4].hasChildNodes() == false ) {
+						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());								        
-						setTimeout(() => {squares[0].appendChild(crossContainer);}, 800);
+						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[5] == "X" && noughtsAndCrosses[9] == "X" && squares[0].hasChildNodes() == false ) {
@@ -247,11 +240,11 @@ startButton.addEventListener("click", function() {
 						setTimeout(() => {squares[0].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[5] == "O" && squares[7].hasChildNodes() == false ) {
-						noughtsAndCrosses[8] = createCross().nodeValue;
+						else if (noughtsAndCrosses[5] == "O" && noughtsAndCrosses[9] == "O" && squares[0].hasChildNodes() == false ) {
+						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());								        
-						setTimeout(() => {squares[7].appendChild(crossContainer);}, 800);
+						setTimeout(() => {squares[0].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[2] == "X" && noughtsAndCrosses[5] == "X" && squares[7].hasChildNodes() == false ) {
@@ -261,11 +254,11 @@ startButton.addEventListener("click", function() {
 						setTimeout(() => {squares[7].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[8] == "O" && noughtsAndCrosses[5] == "O" && squares[1].hasChildNodes() == false ) {
-						noughtsAndCrosses[2] = createCross().nodeValue;
+					else if (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[5] == "O" && squares[7].hasChildNodes() == false ) {
+						noughtsAndCrosses[8] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());								        
-						setTimeout(() => {squares[1].appendChild(crossContainer);}, 800);
+						setTimeout(() => {squares[7].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[8] == "X" && noughtsAndCrosses[5] == "X" && squares[1].hasChildNodes() == false ) {
@@ -275,13 +268,13 @@ startButton.addEventListener("click", function() {
 						setTimeout(() => {squares[1].appendChild(crossContainer);}, 800);
 						checkForWinner();
 							}
-					else if (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[8] == "O" && squares[4].hasChildNodes() == false ) {
-						noughtsAndCrosses[5] = createCross().nodeValue;
+					else if (noughtsAndCrosses[8] == "O" && noughtsAndCrosses[5] == "O" && squares[1].hasChildNodes() == false ) {
+						noughtsAndCrosses[2] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());								        
-						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
+						setTimeout(() => {squares[1].appendChild(crossContainer);}, 800);
 						checkForWinner();
-					}
+					}					
 					else if (noughtsAndCrosses[2] == "X" && noughtsAndCrosses[8] == "X" && squares[4].hasChildNodes() == false ) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
@@ -289,53 +282,53 @@ startButton.addEventListener("click", function() {
 						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[5] == "O" && squares[6].hasChildNodes() == false ) {
-						noughtsAndCrosses[7] = createCross().nodeValue;
+					else if (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[8] == "O" && squares[4].hasChildNodes() == false ) {
+						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());								        
-						setTimeout(() => {squares[6].appendChild(crossContainer);}, 800);
+						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[3] == "X" && noughtsAndCrosses[5] == "X" && squares[6].hasChildNodes() == false ) {
 						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());								        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[6].appendChild(crossContainer);}, 800);
 						checkForWinner();
+					}
+					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[5] == "O" && squares[6].hasChildNodes() == false ) {
+						noughtsAndCrosses[7] = createCross().nodeValue;
+						crossContainer = document.createElement("div");
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[6].appendChild(crossContainer);}, 800);
+						checkForWinner();
+					}					
+					else if (noughtsAndCrosses[5] == "X" && noughtsAndCrosses[7] == "X" && squares[2].hasChildNodes() == false ) {
+						noughtsAndCrosses[3] = createCross().nodeValue;
+						crossContainer = document.createElement("div");
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[2].appendChild(crossContainer);}, 800);
+							checkForWinner();
 					}
 					else if (noughtsAndCrosses[5] == "O" && noughtsAndCrosses[7] == "O" && squares[2].hasChildNodes() == false ) {
 						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());								        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[2].appendChild(crossContainer);}, 800);
-						checkForWinner();
-					}
-					else if (noughtsAndCrosses[5] == "X" && noughtsAndCrosses[7] == "X" && squares[2].hasChildNodes() == false ) {
-						noughtsAndCrosses[3] = createCross().nodeValue;
-						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[2].appendChild(crossContainer);}, 800);
-							checkForWinner();
-					}
-					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[7] == "O" && squares[4].hasChildNodes() == false ) {
-						noughtsAndCrosses[5] = createCross().nodeValue;
-						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());				        
-						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[3] == "X" && noughtsAndCrosses[7] == "X" && squares[4].hasChildNodes() == false ) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());				        
-						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);                                                
+						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);                                          
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[4] == "O" && squares[6].hasChildNodes() == false ) {
-						noughtsAndCrosses[7] = createCross().nodeValue;
+					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[7] == "O" && squares[4].hasChildNodes() == false ) {
+						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());				        
-						setTimeout(() => {squares[6].appendChild(crossContainer);}, 800);
+						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[4] == "X" && squares[6].hasChildNodes() == false ) {
@@ -345,199 +338,206 @@ startButton.addEventListener("click", function() {
 						setTimeout(() => {squares[6].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[7] == "O" && squares[0].hasChildNodes() == false ) {
-						noughtsAndCrosses[1] = createCross().nodeValue;
+					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[4] == "O" && squares[6].hasChildNodes() == false ) {
+						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[0].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());				        
+						setTimeout(() => {squares[6].appendChild(crossContainer);}, 800);
 						checkForWinner();
-					}
+					}					
 					else if (noughtsAndCrosses[4] == "X" && noughtsAndCrosses[7] == "X" && squares[0].hasChildNodes() == false ) {
 						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[0].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[7] == "O" && squares[3].hasChildNodes() == false ) {
-						noughtsAndCrosses[4] = createCross().nodeValue;
+					else if (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[7] == "O" && squares[0].hasChildNodes() == false ) {
+						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[3].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[0].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[7] == "X" && squares[3].hasChildNodes() == false ) {
 						noughtsAndCrosses[4] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[3].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[6] == "O" && squares[8].hasChildNodes() == false ) {
-						noughtsAndCrosses[9] = createCross().nodeValue;
+                    else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[7] == "O" && squares[3].hasChildNodes() == false ) {
+						noughtsAndCrosses[4] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[8].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[3].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[3] == "X" && noughtsAndCrosses[6] == "X" && squares[8].hasChildNodes() == false ) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[8].appendChild(crossContainer);}, 800);
 						checkForWinner();
+					}
+					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[6] == "O" && squares[8].hasChildNodes() == false ) {
+						noughtsAndCrosses[9] = createCross().nodeValue;
+						crossContainer = document.createElement("div");
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[8].appendChild(crossContainer);}, 800);
+						checkForWinner();
+					}					
+					else if (noughtsAndCrosses[6] == "X" && noughtsAndCrosses[9] == "X" && squares[2].hasChildNodes() == false ) {
+						noughtsAndCrosses[3] = createCross().nodeValue;
+						crossContainer = document.createElement("div");
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[2].appendChild(crossContainer);}, 800);
+							checkForWinner();
 					}
 					else if (noughtsAndCrosses[6] == "O" && noughtsAndCrosses[9] == "O" && squares[2].hasChildNodes() == false ) {
 						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[2].appendChild(crossContainer);}, 800);
 						checkForWinner();
-					}
-					else if (noughtsAndCrosses[6] == "X" && noughtsAndCrosses[9] == "X" && squares[2].hasChildNodes() == false ) {
-						noughtsAndCrosses[3] = createCross().nodeValue;
-						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[2].appendChild(crossContainer);}, 800);
-							checkForWinner();
-					}
-					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[9] == "O" && squares[5].hasChildNodes() == false ) {
-						noughtsAndCrosses[6] = createCross().nodeValue;
-						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[5].appendChild(crossContainer);}, 800);
-							checkForWinner();
 					}
 					else if (noughtsAndCrosses[3] == "X" && noughtsAndCrosses[9] == "X" && squares[5].hasChildNodes() == false ) {
 						noughtsAndCrosses[6] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[5].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[2] == "O" && squares[2].hasChildNodes() == false ) {
-						noughtsAndCrosses[3] = createCross().nodeValue;
+                    else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[9] == "O" && squares[5].hasChildNodes() == false ) {
+						noughtsAndCrosses[6] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[2].appendChild(crossContainer);}, 800);
-						checkForWinner();
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[5].appendChild(crossContainer);}, 800);
+							checkForWinner();
 					}
 					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[2] == "X" && squares[2].hasChildNodes() == false ) {
 						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[2].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[3] == "O" && squares[0].hasChildNodes() == false ) {
-						noughtsAndCrosses[1] = createCross().nodeValue;
+                    else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[2] == "O" && squares[2].hasChildNodes() == false ) {
+						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[0].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[2].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[2] == "X" && noughtsAndCrosses[3] == "X" && squares[0].hasChildNodes() == false ) {
 						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[0].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[3] == "O" && squares[1].hasChildNodes() == false ) {
-						noughtsAndCrosses[2] = createCross().nodeValue;
+					else if (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[3] == "O" && squares[0].hasChildNodes() == false ) {
+						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[1].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[0].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[3] == "X" && squares[1].hasChildNodes() == false ) {
 						noughtsAndCrosses[2] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[1].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[5] == "O" && squares[5].hasChildNodes() == false ) {
-						noughtsAndCrosses[6] = createCross().nodeValue;
+                    else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[3] == "O" && squares[1].hasChildNodes() == false ) {
+						noughtsAndCrosses[2] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[5].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[1].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[4] == "X" && noughtsAndCrosses[5] == "X" && squares[5].hasChildNodes() == false ) {
 						noughtsAndCrosses[6] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[5].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[5] == "O" && noughtsAndCrosses[6] == "O" && squares[3].hasChildNodes() == false ) {
-						noughtsAndCrosses[4] = createCross().nodeValue;
+					else if (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[5] == "O" && squares[5].hasChildNodes() == false ) {
+						noughtsAndCrosses[6] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[3].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[5].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[5] == "X" && noughtsAndCrosses[6] == "X" && squares[3].hasChildNodes() == false ) {
 						noughtsAndCrosses[4] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[3].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[6] == "O" && squares[4].hasChildNodes() == false ) {
-						noughtsAndCrosses[5] = createCross().nodeValue;
+                    else if (noughtsAndCrosses[5] == "O" && noughtsAndCrosses[6] == "O" && squares[3].hasChildNodes() == false ) {
+						noughtsAndCrosses[4] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[3].appendChild(crossContainer);}, 800);
 						checkForWinner();
-					}							
+					}
 					else if (noughtsAndCrosses[4] == "X" && noughtsAndCrosses[6] == "X" && squares[4].hasChildNodes() == false ) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[7] == "O" && noughtsAndCrosses[8] == "O" && squares[8].hasChildNodes() == false ) {
-						noughtsAndCrosses[9] = createCross().nodeValue;
+                    else if (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[6] == "O" && squares[4].hasChildNodes() == false ) {
+						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[8].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[4].appendChild(crossContainer);}, 800);
 						checkForWinner();
-					}
+					}							
 					else if (noughtsAndCrosses[7] == "X" && noughtsAndCrosses[8] == "X" && squares[8].hasChildNodes() == false ) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[8].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[8] == "O" && noughtsAndCrosses[9] == "O" && squares[6].hasChildNodes() == false ) {
-						noughtsAndCrosses[7] = createCross().nodeValue;
+                    else if (noughtsAndCrosses[7] == "O" && noughtsAndCrosses[8] == "O" && squares[8].hasChildNodes() == false ) {
+						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[6].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[8].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[8] == "X" && noughtsAndCrosses[9] == "X" && squares[6].hasChildNodes() == false ) {
 						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
+						crossContainer.appendChild(createCross());					        
 						setTimeout(() => {squares[6].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[7] == "O" && noughtsAndCrosses[9] == "O" && squares[7].hasChildNodes() == false ) {
-						noughtsAndCrosses[8] = createCross().nodeValue;
+                    else if (noughtsAndCrosses[8] == "O" && noughtsAndCrosses[9] == "O" && squares[6].hasChildNodes() == false ) {
+						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
-						crossContainer.appendChild(createCross());									        
-						setTimeout(() => {squares[7].appendChild(crossContainer);}, 800);
+						crossContainer.appendChild(createCross());					        
+						setTimeout(() => {squares[6].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
 					else if (noughtsAndCrosses[7] == "X" && noughtsAndCrosses[9] == "X" && squares[7].hasChildNodes() == false ) {
 						noughtsAndCrosses[8] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());									        
+						setTimeout(() => {squares[7].appendChild(crossContainer);}, 800);
+						checkForWinner();
+					}
+					else if (noughtsAndCrosses[7] == "O" && noughtsAndCrosses[9] == "O" && squares[7].hasChildNodes() == false ) {
+						noughtsAndCrosses[8] = createCross().nodeValue;
+						crossContainer = document.createElement("div");
+						crossContainer.appendChild(createCross());						        
 						setTimeout(() => {squares[7].appendChild(crossContainer);}, 800);
 						checkForWinner();
 					}
