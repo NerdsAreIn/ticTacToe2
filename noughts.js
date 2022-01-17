@@ -5,7 +5,6 @@ const displayText = document.getElementById("displayText");
 const squares = Array.from(document.getElementsByClassName("squares"));
 const player1Name = document.getElementById("player1Name");
 const player2Name = document.getElementById("player2Name");
-//const AI_medium_button = document.getElementsByClassName("choice-button")[0];
 const AI_hard_button = document.getElementsByClassName("choice-button")[0];
 const AI_easy_button = document.getElementsByClassName("choice-button")[1];
 const twoPlayerButton = document.getElementsByClassName("choice-button")[2];
@@ -30,10 +29,15 @@ const gameControl = (function() {
 		}, 1000);               
 	};
     const setName = function() {
+		player1Name.value = "";
 		if (mode.includes("AI")) { 
-                player2Name.value = "computer";
+        player2Name.value = "computer";
 		player2Name.readOnly = true;
         }
+		else  {
+		player2Name.value = "";
+		player2Name.readOnly = false;
+		}
 	};
 	const createStartButton = function() {		
         startButton.textContent = "START GAME";			
@@ -54,12 +58,8 @@ const gameControl = (function() {
 		e.stopPropagation();
 		mode = "AI-hard";		
 		closeChoiceScreen();	
-	});    
-	/*AI_medium_button.addEventListener("click", function(e) {
-		e.stopPropagation();
-		mode = "AI-medium";		
-		closeChoiceScreen();	
-	});*/    
+	});
+	
 })();
 
 startButton.addEventListener("click", function() {
