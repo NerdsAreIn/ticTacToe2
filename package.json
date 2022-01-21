@@ -1,0 +1,25 @@
+{
+  "name": "tictactoe2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "noughts-minimax.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --ext .js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/NerdsAreIn/ticTacToe2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NerdsAreIn/ticTacToe2/issues"
+  },
+  "homepage": "https://github.com/NerdsAreIn/ticTacToe2#readme",
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
