@@ -126,32 +126,32 @@ startButton.addEventListener("click", function() {
 			}, 1500);
 		};
 		const checkForWinner = function() {
-			if ((noughtsAndCrosses[1] == "O" && noughtsAndCrosses[5] == "O" && noughtsAndCrosses[9] == "O")
-			 || (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[5] == "O" && noughtsAndCrosses[8] == "O")
-			 || (noughtsAndCrosses[7] == "O" && noughtsAndCrosses[5] == "O" && noughtsAndCrosses[3] == "O")
-			 || (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[5] == "O" && noughtsAndCrosses[6] == "O")
-			 || (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[4] == "O" && noughtsAndCrosses[7] == "O")
-			 || (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[6] == "O" && noughtsAndCrosses[9] == "O")
-			 || (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[2] == "O" && noughtsAndCrosses[3] == "O")
-			 || (noughtsAndCrosses[7] == "O" && noughtsAndCrosses[8] == "O" && noughtsAndCrosses[9] == "O")) {
+			if ((noughtsAndCrosses[1] === "O" && noughtsAndCrosses[5] === "O" && noughtsAndCrosses[9] === "O")
+			 || (noughtsAndCrosses[2] === "O" && noughtsAndCrosses[5] === "O" && noughtsAndCrosses[8] === "O")
+			 || (noughtsAndCrosses[7] === "O" && noughtsAndCrosses[5] === "O" && noughtsAndCrosses[3] === "O")
+			 || (noughtsAndCrosses[4] === "O" && noughtsAndCrosses[5] === "O" && noughtsAndCrosses[6] === "O")
+			 || (noughtsAndCrosses[1] === "O" && noughtsAndCrosses[4] === "O" && noughtsAndCrosses[7] === "O")
+			 || (noughtsAndCrosses[3] === "O" && noughtsAndCrosses[6] === "O" && noughtsAndCrosses[9] === "O")
+			 || (noughtsAndCrosses[1] === "O" && noughtsAndCrosses[2] === "O" && noughtsAndCrosses[3] === "O")
+			 || (noughtsAndCrosses[7] === "O" && noughtsAndCrosses[8] === "O" && noughtsAndCrosses[9] === "O")) {
 				winner = player1;
 				endGame(winner);
 				return winner;
 			}
-			else if ((noughtsAndCrosses[1] == "X" && noughtsAndCrosses[5] == "X" && noughtsAndCrosses[9] == "X")
-			|| (noughtsAndCrosses[2] == "X" && noughtsAndCrosses[5] == "X" && noughtsAndCrosses[8] == "X")
-			|| (noughtsAndCrosses[7] == "X" && noughtsAndCrosses[5] == "X" && noughtsAndCrosses[3] == "X")
-			|| (noughtsAndCrosses[4] == "X" && noughtsAndCrosses[5] == "X" && noughtsAndCrosses[6] == "X")
-			|| (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[4] == "X" && noughtsAndCrosses[7] == "X")
-			|| (noughtsAndCrosses[3] == "X" && noughtsAndCrosses[6] == "X" && noughtsAndCrosses[9] == "X")
-			|| (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[2] == "X" && noughtsAndCrosses[3] == "X")
-			|| (noughtsAndCrosses[7] == "X" && noughtsAndCrosses[8] == "X" && noughtsAndCrosses[9] == "X")) {
+			else if ((noughtsAndCrosses[1] === "X" && noughtsAndCrosses[5] === "X" && noughtsAndCrosses[9] === "X")
+			|| (noughtsAndCrosses[2] === "X" && noughtsAndCrosses[5] === "X" && noughtsAndCrosses[8] === "X")
+			|| (noughtsAndCrosses[7] === "X" && noughtsAndCrosses[5] === "X" && noughtsAndCrosses[3] === "X")
+			|| (noughtsAndCrosses[4] === "X" && noughtsAndCrosses[5] === "X" && noughtsAndCrosses[6] === "X")
+			|| (noughtsAndCrosses[1] === "X" && noughtsAndCrosses[4] === "X" && noughtsAndCrosses[7] === "X")
+			|| (noughtsAndCrosses[3] === "X" && noughtsAndCrosses[6] === "X" && noughtsAndCrosses[9] === "X")
+			|| (noughtsAndCrosses[1] === "X" && noughtsAndCrosses[2] === "X" && noughtsAndCrosses[3] === "X")
+			|| (noughtsAndCrosses[7] === "X" && noughtsAndCrosses[8] === "X" && noughtsAndCrosses[9] === "X")) {
 				winner = player2;
 				endGame(winner);
 				return winner;
 			}
-			else if (Object.values(noughtsAndCrosses).length == 9
-			&& noughtsAndCrosses.length == 10 && winner == undefined) {
+			else if (Object.values(noughtsAndCrosses).length === 9
+			&& noughtsAndCrosses.length === 10 && winner === undefined) {
 				winner = "no winner";
 				endGame(winner);
 				return winner;
@@ -166,7 +166,7 @@ startButton.addEventListener("click", function() {
 			let crossContainer;
 			for (let i = 0; i < squares.length; i++) {
 				squares[i].onclick = () => {
-					if (winner == player1 || winner == player2 || winner == "no winner") {
+					if (winner === player1 || winner === player2 || winner === "no winner") {
 						// eslint-disable-next-line no-useless-return
 						return;
 					}
@@ -193,8 +193,8 @@ startButton.addEventListener("click", function() {
 			}
 			const randomMove = function() {
 				randomNumber = Math.floor(Math.random() * 9);
-				if ((Object.values(noughtsAndCrosses).length == 9 && noughtsAndCrosses.length == 10)
-				|| winner != undefined) {
+				if ((Object.values(noughtsAndCrosses).length === 9 && noughtsAndCrosses.length === 10)
+				|| winner !== undefined) {
 					// eslint-disable-next-line no-useless-return
 					return;
 				}
@@ -220,7 +220,7 @@ startButton.addEventListener("click", function() {
 			if (mode.includes("hard")) {
 				for (let i = 0; i < squares.length; i++) {
 					squares[i].onclick = () => {
-						if (winner == player1 || winner == player2 || winner == "no winner") {
+						if (winner === player1 || winner === player2 || winner === "no winner") {
 							return;
 						}
 						else {
@@ -240,7 +240,7 @@ startButton.addEventListener("click", function() {
 					};
 				}
 				const strategicMove = function() {
-					if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[5] == "X" && squares[8].hasChildNodes() == false) {
+					if (noughtsAndCrosses[1] === "X" && noughtsAndCrosses[5] === "X" && squares[8].hasChildNodes() === false) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -250,7 +250,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[5] == "O" && squares[8].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "O" && noughtsAndCrosses[5] === "O" && squares[8].hasChildNodes() === false) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -259,7 +259,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[9] == "X" && squares[4].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "X" && noughtsAndCrosses[9] === "X" && squares[4].hasChildNodes() === false) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -268,7 +268,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[9] == "O" && squares[4].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "O" && noughtsAndCrosses[9] === "O" && squares[4].hasChildNodes() === false) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -277,7 +277,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[5] == "X" && noughtsAndCrosses[9] == "X" && squares[0].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[5] === "X" && noughtsAndCrosses[9] === "X" && squares[0].hasChildNodes() === false) {
 						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -286,7 +286,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[5] == "O" && noughtsAndCrosses[9] == "O" && squares[0].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[5] === "O" && noughtsAndCrosses[9] === "O" && squares[0].hasChildNodes() === false) {
 						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -295,7 +295,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[2] == "X" && noughtsAndCrosses[5] == "X" && squares[7].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[2] === "X" && noughtsAndCrosses[5] === "X" && squares[7].hasChildNodes() === false) {
 						noughtsAndCrosses[8] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -304,7 +304,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[5] == "O" && squares[7].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[2] === "O" && noughtsAndCrosses[5] === "O" && squares[7].hasChildNodes() === false) {
 						noughtsAndCrosses[8] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -313,7 +313,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[8] == "X" && noughtsAndCrosses[5] == "X" && squares[1].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[8] === "X" && noughtsAndCrosses[5] === "X" && squares[1].hasChildNodes() === false) {
 						noughtsAndCrosses[2] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -322,7 +322,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[8] == "O" && noughtsAndCrosses[5] == "O" && squares[1].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[8] === "O" && noughtsAndCrosses[5] === "O" && squares[1].hasChildNodes() === false) {
 						noughtsAndCrosses[2] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -331,7 +331,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[2] == "X" && noughtsAndCrosses[8] == "X" && squares[4].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[2] === "X" && noughtsAndCrosses[8] === "X" && squares[4].hasChildNodes() === false) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -340,7 +340,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[8] == "O" && squares[4].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[2] === "O" && noughtsAndCrosses[8] === "O" && squares[4].hasChildNodes() === false) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -349,7 +349,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "X" && noughtsAndCrosses[5] == "X" && squares[6].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[3] === "X" && noughtsAndCrosses[5] === "X" && squares[6].hasChildNodes() === false) {
 						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -358,7 +358,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[5] == "O" && squares[6].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[3] === "O" && noughtsAndCrosses[5] === "O" && squares[6].hasChildNodes() === false) {
 						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -367,7 +367,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[5] == "X" && noughtsAndCrosses[7] == "X" && squares[2].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[5] === "X" && noughtsAndCrosses[7] === "X" && squares[2].hasChildNodes() === false) {
 						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -376,7 +376,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[5] == "O" && noughtsAndCrosses[7] == "O" && squares[2].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[5] === "O" && noughtsAndCrosses[7] === "O" && squares[2].hasChildNodes() === false) {
 						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -385,7 +385,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "X" && noughtsAndCrosses[7] == "X" && squares[4].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[3] === "X" && noughtsAndCrosses[7] === "X" && squares[4].hasChildNodes() === false) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -394,7 +394,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[7] == "O" && squares[4].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[3] === "O" && noughtsAndCrosses[7] === "O" && squares[4].hasChildNodes() === false) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -403,7 +403,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[4] == "X" && squares[6].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "X" && noughtsAndCrosses[4] === "X" && squares[6].hasChildNodes() === false) {
 						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -412,7 +412,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[4] == "O" && squares[6].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "O" && noughtsAndCrosses[4] === "O" && squares[6].hasChildNodes() === false) {
 						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -421,7 +421,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[4] == "X" && noughtsAndCrosses[7] == "X" && squares[0].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[4] === "X" && noughtsAndCrosses[7] === "X" && squares[0].hasChildNodes() === false) {
 						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -430,7 +430,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[7] == "O" && squares[0].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[4] === "O" && noughtsAndCrosses[7] === "O" && squares[0].hasChildNodes() === false) {
 						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -439,7 +439,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[7] == "X" && squares[3].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "X" && noughtsAndCrosses[7] === "X" && squares[3].hasChildNodes() === false) {
 						noughtsAndCrosses[4] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -448,7 +448,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[7] == "O" && squares[3].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "O" && noughtsAndCrosses[7] === "O" && squares[3].hasChildNodes() === false) {
 						noughtsAndCrosses[4] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -457,7 +457,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "X" && noughtsAndCrosses[6] == "X" && squares[8].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[3] === "X" && noughtsAndCrosses[6] === "X" && squares[8].hasChildNodes() === false) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -466,7 +466,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[6] == "O" && squares[8].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[3] === "O" && noughtsAndCrosses[6] === "O" && squares[8].hasChildNodes() === false) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -475,7 +475,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[6] == "X" && noughtsAndCrosses[9] == "X" && squares[2].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[6] === "X" && noughtsAndCrosses[9] === "X" && squares[2].hasChildNodes() === false) {
 						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -484,7 +484,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[6] == "O" && noughtsAndCrosses[9] == "O" && squares[2].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[6] === "O" && noughtsAndCrosses[9] === "O" && squares[2].hasChildNodes() === false) {
 						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -493,7 +493,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "X" && noughtsAndCrosses[9] == "X" && squares[5].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[3] === "X" && noughtsAndCrosses[9] === "X" && squares[5].hasChildNodes() === false) {
 						noughtsAndCrosses[6] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -502,7 +502,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[3] == "O" && noughtsAndCrosses[9] == "O" && squares[5].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[3] === "O" && noughtsAndCrosses[9] === "O" && squares[5].hasChildNodes() === false) {
 						noughtsAndCrosses[6] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -511,7 +511,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[2] == "X" && squares[2].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "X" && noughtsAndCrosses[2] === "X" && squares[2].hasChildNodes() === false) {
 						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -520,7 +520,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[2] == "O" && squares[2].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "O" && noughtsAndCrosses[2] === "O" && squares[2].hasChildNodes() === false) {
 						noughtsAndCrosses[3] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -529,7 +529,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[2] == "X" && noughtsAndCrosses[3] == "X" && squares[0].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[2] === "X" && noughtsAndCrosses[3] === "X" && squares[0].hasChildNodes() === false) {
 						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -538,7 +538,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[2] == "O" && noughtsAndCrosses[3] == "O" && squares[0].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[2] === "O" && noughtsAndCrosses[3] === "O" && squares[0].hasChildNodes() === false) {
 						noughtsAndCrosses[1] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -547,7 +547,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "X" && noughtsAndCrosses[3] == "X" && squares[1].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "X" && noughtsAndCrosses[3] === "X" && squares[1].hasChildNodes() === false) {
 						noughtsAndCrosses[2] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -556,7 +556,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[1] == "O" && noughtsAndCrosses[3] == "O" && squares[1].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[1] === "O" && noughtsAndCrosses[3] === "O" && squares[1].hasChildNodes() === false) {
 						noughtsAndCrosses[2] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -565,7 +565,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[4] == "X" && noughtsAndCrosses[5] == "X" && squares[5].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[4] === "X" && noughtsAndCrosses[5] === "X" && squares[5].hasChildNodes() === false) {
 						noughtsAndCrosses[6] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -574,7 +574,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[5] == "O" && squares[5].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[4] === "O" && noughtsAndCrosses[5] === "O" && squares[5].hasChildNodes() === false) {
 						noughtsAndCrosses[6] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -583,7 +583,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[5] == "X" && noughtsAndCrosses[6] == "X" && squares[3].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[5] === "X" && noughtsAndCrosses[6] === "X" && squares[3].hasChildNodes() === false) {
 						noughtsAndCrosses[4] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -592,7 +592,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[5] == "O" && noughtsAndCrosses[6] == "O" && squares[3].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[5] === "O" && noughtsAndCrosses[6] === "O" && squares[3].hasChildNodes() === false) {
 						noughtsAndCrosses[4] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -601,7 +601,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[4] == "X" && noughtsAndCrosses[6] == "X" && squares[4].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[4] === "X" && noughtsAndCrosses[6] === "X" && squares[4].hasChildNodes() === false) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -610,7 +610,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[4] == "O" && noughtsAndCrosses[6] == "O" && squares[4].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[4] === "O" && noughtsAndCrosses[6] === "O" && squares[4].hasChildNodes() === false) {
 						noughtsAndCrosses[5] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -619,7 +619,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[7] == "X" && noughtsAndCrosses[8] == "X" && squares[8].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[7] === "X" && noughtsAndCrosses[8] === "X" && squares[8].hasChildNodes() === false) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -628,7 +628,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[7] == "O" && noughtsAndCrosses[8] == "O" && squares[8].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[7] === "O" && noughtsAndCrosses[8] === "O" && squares[8].hasChildNodes() === false) {
 						noughtsAndCrosses[9] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -637,7 +637,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[8] == "X" && noughtsAndCrosses[9] == "X" && squares[6].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[8] === "X" && noughtsAndCrosses[9] === "X" && squares[6].hasChildNodes() === false) {
 						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -646,7 +646,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[8] == "O" && noughtsAndCrosses[9] == "O" && squares[6].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[8] === "O" && noughtsAndCrosses[9] === "O" && squares[6].hasChildNodes() === false) {
 						noughtsAndCrosses[7] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -655,7 +655,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[7] == "X" && noughtsAndCrosses[9] == "X" && squares[7].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[7] === "X" && noughtsAndCrosses[9] === "X" && squares[7].hasChildNodes() === false) {
 						noughtsAndCrosses[8] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -664,7 +664,7 @@ startButton.addEventListener("click", function() {
 						}, 800);
 						checkForWinner();
 					}
-					else if (noughtsAndCrosses[7] == "O" && noughtsAndCrosses[9] == "O" && squares[7].hasChildNodes() == false) {
+					else if (noughtsAndCrosses[7] === "O" && noughtsAndCrosses[9] === "O" && squares[7].hasChildNodes() === false) {
 						noughtsAndCrosses[8] = createCross().nodeValue;
 						crossContainer = document.createElement("div");
 						crossContainer.appendChild(createCross());
@@ -678,9 +678,9 @@ startButton.addEventListener("click", function() {
 			}
 		}
 
-		else if (mode == "2Player") {
+		else if (mode === "2Player") {
 			const takeTurns = function() {
-				if (player == player1) player = player2;
+				if (player === player1) player = player2;
 				else player = player1;
 				return player;
 			};
@@ -688,14 +688,14 @@ startButton.addEventListener("click", function() {
 				signContainer = document.createElement("div");
 				sign = document.createTextNode(player.symbol);
 				signContainer.appendChild(sign);
-				if (sign.nodeValue == "O")  {
+				if (sign.nodeValue === "O")  {
 					signContainer.classList.add("nought");
 				}
 				return signContainer;
 			};
 			for (let i = 0; i < squares.length; i++) {
 				squares[i].addEventListener("click", function() {
-					if (winner == player1 || winner == player2 || winner == "no winner") {
+					if (winner === player1 || winner === player2 || winner === "no winner") {
   						return;
 					}
 					else {
